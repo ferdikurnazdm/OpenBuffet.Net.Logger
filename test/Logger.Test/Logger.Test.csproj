@@ -49,10 +49,25 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleAdapterTest\ConsoleAdapterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\External\Adapters\Logger.Adapters.Console\Logger.Adapters.Console.csproj">
+      <Project>{245e1f3e-a07d-4af2-bedd-56c5fccb60cc}</Project>
+      <Name>Logger.Adapters.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Internal\Core\Logger.Application\Logger.Application.csproj">
+      <Project>{4eb8962d-8779-447b-807b-4127ef7cf27e}</Project>
+      <Name>Logger.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Internal\Core\Logger.Domain\Logger.Domain.csproj">
+      <Project>{fcbd54b8-9bd7-4a70-bf92-f68352db4569}</Project>
+      <Name>Logger.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
